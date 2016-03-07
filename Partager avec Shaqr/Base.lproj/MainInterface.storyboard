@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="j1y-V4-xli">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Share View Controller-->
+        <scene sceneID="ceB-am-kn3">
+            <objects>
+                <viewController id="j1y-V4-xli" customClass="ShareViewController" customModule="Partager_avec_Shaqr" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8bI-gs-bmD"/>
+                        <viewControllerLayoutGuide type="bottom" id="d5i-Ba-RvD"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="wbc-yd-nQP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lZH-hb-7vu">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <color key="barTintColor" red="0.9882352941176471" green="0.58039215686274515" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem id="Fjp-7O-kux">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="nZL-4V-oeh">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="backButton:" destination="j1y-V4-xli" id="nWM-Li-jSX"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ShaQR_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="zFn-lp-mw4">
+                                <rect key="frame" x="0.0" y="64" width="600" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="cXC-Uw-TJO"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="awC-I9-eP5">
+                                <rect key="frame" x="180" y="200" width="240" height="258"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="258" id="BI3-WE-18Q"/>
+                                    <constraint firstAttribute="width" constant="240" id="DCl-tT-j1k"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="awC-I9-eP5" firstAttribute="centerX" secondItem="zFn-lp-mw4" secondAttribute="centerX" id="5oo-dT-C8Y"/>
+                            <constraint firstItem="lZH-hb-7vu" firstAttribute="top" secondItem="8bI-gs-bmD" secondAttribute="bottom" id="ESj-wG-2oI"/>
+                            <constraint firstItem="zFn-lp-mw4" firstAttribute="leading" secondItem="wbc-yd-nQP" secondAttribute="leading" id="MVW-en-RaC"/>
+                            <constraint firstItem="zFn-lp-mw4" firstAttribute="top" secondItem="lZH-hb-7vu" secondAttribute="bottom" id="MWd-zt-ZGd"/>
+                            <constraint firstItem="awC-I9-eP5" firstAttribute="top" secondItem="zFn-lp-mw4" secondAttribute="bottom" constant="8" symbolic="YES" id="P3L-xd-TnL"/>
+                            <constraint firstAttribute="trailing" secondItem="zFn-lp-mw4" secondAttribute="trailing" id="YjF-hL-lRC"/>
+                            <constraint firstItem="zFn-lp-mw4" firstAttribute="leading" secondItem="lZH-hb-7vu" secondAttribute="leading" id="jIx-VO-iN6"/>
+                            <constraint firstItem="lZH-hb-7vu" firstAttribute="trailing" secondItem="zFn-lp-mw4" secondAttribute="trailing" id="pPJ-eg-nfU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgQRCode" destination="awC-I9-eP5" id="job-Fj-j5m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CEy-Cv-SGf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="539" y="97"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ShaQR_Logo" width="640" height="400"/>
+    </resources>
+</document>
